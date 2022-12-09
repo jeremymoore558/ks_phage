@@ -1,1 +1,0 @@
-Before running code to generate figures, some analyses muse be run first. To do this, run generatePlotsData.m.

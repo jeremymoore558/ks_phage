@@ -62,8 +62,9 @@ function [drho_cell_dt, drho_cell2_dt, drho_phage_dt, dAdt, dRdt] = integrateSte
     drho_phage_dt(:,2:end-1,:) = SimParams.MuP .* (rho_phage_1(:,1:end-2,:) + rho_phage_1(:,3:end,:) - 2*rho_phage_1(:,2:end-1,:))./(dx.^2);
     
     %Predation
+	%230807 changed this equation, so the second cell type has a different burst size from the first cell type
     drho_phage_dt(:,2:end-1,:) = drho_phage_dt(:,2:end-1,:) + SimParams.irate.*(SimParams.b - 1).*rho_cell_1(:,2:end-1,:) .* rho_phage_1(:,2:end-1,:) + ...
-        SimParams.irate2.*(SimParams.b - 1).*rho_cell2_1(:,2:end-1,:) .* rho_phage_1(:,2:end-1,:);
+        SimParams.irate2.*(SimParams.b2 - 1).*rho_cell2_1(:,2:end-1,:) .* rho_phage_1(:,2:end-1,:);
     
     
     %% Handle attractant dynamics

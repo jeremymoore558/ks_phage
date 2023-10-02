@@ -9,7 +9,7 @@ function [] = simulateWave(SimParams)
     mkdir(OutName)
     SaveName = ['GaussPhage_', 'SimI2_', (num2str(SimParams.irate2)), 'Chi2_', (num2str(SimParams.Chi2)),...
         'cA2_',(num2str(SimParams.cA2)), 'cR2_',(num2str(SimParams.cR2)),...
-        'Y_', (num2str(SimParams.Y2))];
+        'Y_', (num2str(SimParams.Y2)), 'b_', (num2str(SimParams.b2))];
     SaveName = strrep(SaveName,'.','_');
     %% Initialization
     %There are 5 equations:

@@ -1,9 +1,14 @@
-# ks
-Code for running the simulations in:
-"Blazanin, Moore, Olsen, Travisano. 2022"
+# ks_2Phenotype_phage
+keller-segel type of solver (PDE), modified to include predation by 2 phages with different phenotype.
+Parameters for cell and phage behavior are in 'parameters.m' 
 
-The 'Main_*.m' files set up and run all simulations for each of the conditions described in the paper.
+Simulations with different conditions can be run using one of several wrappers, each titled 'Main_().m'
+Each of these wrappers scans over multiple combinations of two parameters at a time and simulates 
+two populations of bacteria migrating on a single shared resource pool. 
 
-The folder "analysis" extracts invasion statistics from the simulations.
+The actual simulations are performed by the 'simulateWave.m' scripts, which in most cases, should not need to be edited.
 
-Simulation scripts generate folders for saving data.
+Simple analysis of the outputs (comparing fitness of cell populations with different susceptibility to phage) 
+can be found in the 'Analysis_()/' directories. 
+
+This work was done in collaboration with Mike Blazanin.

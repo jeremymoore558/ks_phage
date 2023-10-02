@@ -36,6 +36,7 @@ function params = parameters()
 
     params.b = 30; %Burst size
 %     params.b = 20; %Burst size
+    params.b2 = 30;
 
     %Attractant parameters
     params.KiA = 18; %Receptor-binding

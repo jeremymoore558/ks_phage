@@ -48,7 +48,7 @@ for ii = 1:length(FileList)
     Relativeb = SimParams.b2 ./ SimParams.b;
     
     %% Store measurements
-    Measurements(ii, :) = [cell_population, cell2_population, relativecA, Relativeb, SimParams.cA, SimParams.irate];
+    Measurements(ii, :) = [cell_population, cell2_population, relativecA, Relativeb, SimParams.cA, SimParams.b];
 end
 
 %% Plot
@@ -69,7 +69,7 @@ set(gca,'xscale', 'log', 'yscale', 'log')
 saveas(gcf, './b_vs_cA.png')
 
 %% Export Data
-headers = ["Cell_population", "Cell2_population", "relativecA", "relativeI", "cA", "irate"];
+headers = ["Cell_population", "Cell2_population", "relativecA", "relativeb", "cA", "b"];
 textHeader = strjoin(headers, ',');
 fid = fopen('./b_vs_cA.csv', 'w');
 fprintf(fid,'%s\n',textHeader)

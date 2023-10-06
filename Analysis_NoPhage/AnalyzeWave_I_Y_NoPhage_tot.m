@@ -61,7 +61,7 @@ figure()
 scatter(relY, relI, 60, log(relPopulation), 'filled')
 a = colorbar;
 colormap Jet
-a.Label.String = 'log N1/N2';
+a.Label.String = 'log N2/N1';
 a.Label.Rotation = -90;
 xlabel("Relative Y")
 ylabel("Relative I")

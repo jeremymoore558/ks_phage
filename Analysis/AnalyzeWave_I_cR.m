@@ -69,7 +69,7 @@ set(gca,'xscale', 'log', 'yscale', 'log')
 saveas(gcf, './I_vs_cR.png')
 
 %% Export Data
-headers = ["Cell_population", "Cell2_population", "relativecA", "relativeI", "cR", "irate"];
+headers = ["Cell_population", "Cell2_population", "relativecR", "relativeI", "cR", "irate"];
 textHeader = strjoin(headers, ',');
 fid = fopen('./I_vs_cR.csv', 'w');
 fprintf(fid,'%s\n',textHeader)

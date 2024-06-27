@@ -11,4 +11,6 @@ The actual simulations are performed by the 'simulateWave.m' scripts, which in m
 Simple analysis of the outputs (comparing fitness of cell populations with different susceptibility to phage) 
 can be found in the 'Analysis_()/' directories. 
 
+The two subdirectories contain copies of the same scripts, but the parameter for phage diffusion is 0 or 40, respectively
+
 This work was done in collaboration with Mike Blazanin.

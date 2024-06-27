@@ -3,14 +3,14 @@ clear all
 close all
 
 % FileList = dir('./OutputsIChi/*.mat');
-FileList = dir('../Outputs_NoPhageControl/OutputsIChi/*.mat');
+FileList = dir('../Outputs_NoPhage/OutputsIChi/*.mat');
 
 %Store measurements (PoplationCell 1, Pop. Cell 2, relative Chi,
 %relative i)
 Measurements = zeros(length(FileList), 6); 
 
 for ii = 1:length(FileList)
-    File = ['../Outputs_NoPhageControl/OutputsIChi/', FileList(ii).name];
+    File = ['../Outputs_NoPhage/OutputsIChi/', FileList(ii).name];
     load(File)
 
     %% Get wave at last timepoint

@@ -3,14 +3,14 @@ clear all
 close all
 
 % FileList = dir('./OutputsIChi/*.mat');
-FileList = dir('../Outputs_WidePhageControl/OutputsIChi_GaussPhage/*.mat');
+FileList = dir('../Outputs_WideGaussPhage/OutputsIChi_GaussPhage/*.mat');
 
 %Store measurements (PoplationCell 1, Pop. Cell 2, relative Chi,
 %relative i)
 Measurements = zeros(length(FileList), 6); 
 
 for ii = 1:length(FileList)
-    File = ['../Outputs_WidePhageControl/OutputsIChi_GaussPhage/', FileList(ii).name];
+    File = ['../Outputs_WideGaussPhage/OutputsIChi_GaussPhage/', FileList(ii).name];
     load(File)
 
     %% Get wave at last timepoint
